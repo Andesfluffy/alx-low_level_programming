@@ -1,33 +1,33 @@
 #include "main.h"
 
 /**
- * print_triangle - entry point
- * Description: Prints diagonals
- * @size: size of the triangle
- * Return: void
+ * print_triangle - Prints a triangle using the '#' character
+ * @size: The size of the triangle
+ *
+ * Description: If size is 0 or less, only a new line is printed
  */
-
 void print_triangle(int size)
 {
-	int row, hashes, spaces;
-
 	if (size <= 0)
 	{
-		_putchar('\n');
+		_putchar('\n'); /* Print new line for size <= 0 */
+		return;
 	}
-	else
+
+	for (int row = 1; row <= size; row++)
 	{
-		for (row = 1; row <= size; row++)
+		/* Print spaces for each row */
+		for (int space = 1; space <= size - row; space++)
 		{
-			for (spaces = size - row; spaces >= 1; spaces--)
-			{
-				_putchar(' ');
-			}
-			for (hashes = 1; hashes <= row; hashes++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			_putchar(' ');
 		}
+
+		/* Print '#' characters for each row */
+		for (int col = 1; col <= row; col++)
+		{
+			_putchar('#');
+		}
+
+		_putchar('\n'); /* Move to the next line after each row */
 	}
 }
