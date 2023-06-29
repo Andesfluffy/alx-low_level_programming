@@ -1,43 +1,31 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
- * print_array - check the code for ALX School students.
- * @a: an array of integers
- * @n: the number of elements to swap
+ * reverse_array - a function that reverses the
+ *                content of an array of integers
  *
- * Return: nothing.
+ * @a: pointer to int array
+ * @n: is the number of elements to swap
+ *
+ * Return: nothing
 */
 
-void print_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
-	int i;
+	int temp, s, e;
 
-	i = 0;
-	while (i < n)
+	s = 0;
+	e = n - 1;
+	/**
+	 * set value in array a in temp
+	 * then place the last array in
+	 * the first array then place
+	 * value in temp to last array
+	*/
+	while (s < e)
 	{
-		if (i != 0)
-		{
-			printf(", ");
-		}
-		printf("%d", a[i]);
-		i++;
+		temp = a[s];
+		a[s] = a[e];
+		a[e] = temp;
+		s++;
+		e--;
 	}
-		printf("\n");
-}
-
-/**
- * main - check the code for ALX School students.
- *
- * Return: Always 0.
-*/
-
-int main(void)
-{
-	int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
-
-	print_array(a, sizeof(a) / sizeof(int));
-	reverse_array(a, sizeof(a) / sizeof(int));
-	print_array(a, sizeof(a) / sizeof(int));
-	return (0);
 }
