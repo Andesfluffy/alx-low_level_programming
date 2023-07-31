@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * main - adds positive numbers.
  * @argc: argument count
  * @argv: arguments
  *
  * Return: 0
- */
+*/
 int main(int argc, char **argv)
 {
-	int i, n, sum = 0;
+int i, n, sum = 0;
 	char *flag;
 
 	if (argc < 2)
@@ -33,6 +32,5 @@ int main(int argc, char **argv)
 		}
 	}
 	printf("%d\n", sum);
-
 	return (0);
 }

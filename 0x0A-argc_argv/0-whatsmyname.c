@@ -1,7 +1,6 @@
 #include <stdio.h>
-
 /**
- * main - prints its name, followed by a new line.
+ * main - Prints the name of the program
  * @argc: argument count
  * @argv: arguments
  *
@@ -9,8 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	(void)argc;
-
-	printf("%s\n", argv[0]);
-	return (0);
+(void)argc;
+printf("%s\n", argv[0]);
+return (0);
 }
