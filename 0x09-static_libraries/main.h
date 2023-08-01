@@ -24,4 +24,8 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
 
+<<<<<<< HEAD
 #endif
+=======
+#endif
+>>>>>>> 052e5bdd96dbd22ab737f4a7e62a397c20698763
