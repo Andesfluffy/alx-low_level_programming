@@ -1,1 +1,1 @@
-This readme shall be edited later , trust me 
+This is 0x09-static_libraries Directory
